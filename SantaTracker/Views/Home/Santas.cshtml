@@ -1,0 +1,58 @@
+﻿@model IEnumerable<SantaTracker.Models.Santa>
+
+@{
+    ViewBag.Title = "Santas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Santas</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasOwnSuit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasRealBeard)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayRate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(modelItem => item.HasOwnSuit)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(modelItem => item.HasRealBeard)
+        </td>
+        <td align="right">
+            @Html.DisplayFor(modelItem => item.PayRate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

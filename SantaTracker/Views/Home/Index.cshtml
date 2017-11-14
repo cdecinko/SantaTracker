@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Santa Tracker</h1>
+    <p class="lead">Do you know where your Santa is? Keep track of your mall Santa.</p>
+    <p><a href="@Url.Action("About", "Home")" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Manage Santas</h2>
+        <p>Manage the name of your Santa and his profile.</p>
+        <p><a class="btn btn-default" href="@Url.Action("Santas", "Home")">Let's go &raquo;</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Manage Locations</h2>
+        <p>Manage where your Santa should be.</p>
+        <p><a class="btn btn-default" href="@Url.Action("Locations", "Home")">Let's go &raquo;</a></p>
+    </div>
+</div>
